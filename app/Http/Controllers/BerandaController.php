@@ -13,4 +13,8 @@ class BerandaController extends Controller
      public function tentang(){
         return view('front.tentang');
     }
+
+    public function contact(){
+    return view('front.contact');
+}
 }

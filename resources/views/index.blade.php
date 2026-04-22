@@ -40,7 +40,7 @@
                     <li class="nav-item"><a class="nav-link" href="#services">Layanan</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Proyek</a></li>
                     <li class="nav-item"><a class="nav-link" href="#testimonials">Testimoni</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Kontak</a></li>
                 </ul>
             </div>
         </div>
@@ -59,7 +59,7 @@
                     <div class="footer-desc">
                         <img src="{{ asset('/asset/img/ARYCON_Scnd_White_Tag.png') }}" width="200" height="60"
                             alt="PT Aryantoputra Mitranusantara">
-                   </div>
+                    </div>
                     <p class="footer-desc">Perusahaan jasa konstruksi berpengalaman yang melayani pekerjaan sipil, mekanikal, kelistrikan, dan perpipaan sejak 1988.</p>
                     <div class="footer-social">
                         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -73,7 +73,7 @@
                         <li><a href="#about">Tentang Kami</a></li>
                         <li><a href="#services">Layanan</a></li>
                         <li><a href="#projects">Proyek</a></li>
-                        <li><a href="#contact">Kontak</a></li>
+                        <li><a href="{{ route('contact') }}">Kontak</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-6 col-lg-3">
@@ -85,19 +85,18 @@
                     </ul>
                 </div>
                 <div class="col-lg-3">
-                    <div class="footer-heading">Sertifikasi</div>
-                    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:4px">
-                        <span style="border:1px solid rgba(212,135,10,.3);color:var(--primary);font-size:.72rem;padding:4px 10px;letter-spacing:1px">ISO 9001</span>
-                        <span style="border:1px solid rgba(212,135,10,.3);color:var(--primary);font-size:.72rem;padding:4px 10px;letter-spacing:1px">ISO 14001</span>
-                        <span style="border:1px solid rgba(212,135,10,.3);color:var(--primary);font-size:.72rem;padding:4px 10px;letter-spacing:1px">K3 OHSAS</span>
-                        <span style="border:1px solid rgba(212,135,10,.3);color:var(--primary);font-size:.72rem;padding:4px 10px;letter-spacing:1px">LPJK Kelas A</span>
-                        <span style="border:1px solid rgba(212,135,10,.3);color:var(--primary);font-size:.72rem;padding:4px 10px;letter-spacing:1px">SNI</span>
-                    </div>
+                    <div class="footer-heading">Kontak</div>
+                    <p style="color:rgba(255,255,255,.45);font-size:.82rem;line-height:1.7">
+                        Jl. Nusakambangan No.34<br />
+                        Malang, Jawa Timur, Indonesia<br /><br />
+                        0341-366403<br>
+                        0819-0606-2622<br />
+                        pt_arpmn@yahoo.com
+                    </p>
                 </div>
             </div>
             <div class="footer-bottom d-flex justify-content-between flex-wrap gap-2">
                 <p>© 2026 PT. Aryantoputra Mitranusantara.</p>
-                <p>Dibuat dengan <i class="fas fa-heart" style="color:var(--primary)"></i> menggunakan Laravel &amp; Bootstrap</p>
             </div>
         </div>
     </footer>
@@ -145,149 +144,129 @@
 
     <!-- Corousel Logic -->
     <script>
+        /* ══════════════════════════════════════════════════════
+   PORTFOLIO CAROUSEL
+   ══════════════════════════════════════════════════════ */
         (function() {
             const track = document.getElementById('projTrack');
-            const cards = Array.from(track.querySelectorAll('.proj-card'));
             const btnPrev = document.getElementById('projPrev');
             const btnNext = document.getElementById('projNext');
-            const dotsWrap = document.getElementById('projDots');
-            const progress = document.getElementById('projProgress');
-            const counter = document.getElementById('slideCounter');
-            const total = cards.length;
+            const fill = document.getElementById('projFill');
+            const curEl = document.getElementById('projCur');
+            const maxEl = document.getElementById('projMax');
+            const dotsEl = document.getElementById('projDots');
+
+            const cards = Array.from(track.querySelectorAll('.proj-card'));
+            const TOTAL = cards.length;
+            let perView = calcPerView();
             let current = 0;
-            let autoTimer = null;
+            let autoId = null;
 
-            /* ── responsive: how many cards visible? ── */
-            function visibleCount() {
-                const w = window.innerWidth;
-                if (w >= 1200) return 3;
-                if (w >= 768) return 2;
-                return 1;
-            }
+            maxEl.textContent = pad(TOTAL);
 
-            /* ── card width including gap ── */
-            function cardStep() {
-                const gap = 24;
-                return cards[0].offsetWidth + gap;
-            }
-
-            /* ── max index ── */
-            function maxIndex() {
-                return Math.max(0, total - visibleCount());
-            }
-
-            /* ── render ── */
-            function render() {
-                const idx = Math.min(current, maxIndex());
-                track.style.transform = `translateX(-${idx * cardStep()}px)`;
-
-                // counter
-                counter.textContent = String(idx + 1).padStart(2, '0');
-
-                // progress bar
-                progress.style.width = ((idx + visibleCount()) / total * 100).toFixed(1) + '%';
-
-                // dots
-                Array.from(dotsWrap.querySelectorAll('.carousel-dot')).forEach((d, i) => {
-                    d.classList.toggle('active', i === idx);
-                });
-
-                // buttons
-                btnPrev.disabled = idx === 0;
-                btnNext.disabled = idx >= maxIndex();
-            }
-
-            /* ── build dots ── */
+            /* Build dots */
             function buildDots() {
-                dotsWrap.innerHTML = '';
-                const count = maxIndex() + 1;
-                for (let i = 0; i < count; i++) {
-                    const d = document.createElement('button');
-                    d.className = 'carousel-dot' + (i === 0 ? ' active' : '');
-                    d.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+                dotsEl.innerHTML = '';
+                const pages = TOTAL - perView;
+                for (let i = 0; i <= pages; i++) {
+                    const d = document.createElement('div');
+                    d.className = 'pdot' + (i === current ? ' on' : '');
                     d.addEventListener('click', () => {
-                        current = i;
-                        render();
-                        resetAuto();
+                        stopAuto();
+                        go(i);
+                        startAuto();
                     });
-                    dotsWrap.appendChild(d);
+                    dotsEl.appendChild(d);
                 }
             }
 
-            /* ── nav buttons ── */
-            btnNext.addEventListener('click', () => {
-                if (current < maxIndex()) {
-                    current++;
-                    render();
-                    resetAuto();
-                }
-            });
-            btnPrev.addEventListener('click', () => {
-                if (current > 0) {
-                    current--;
-                    render();
-                    resetAuto();
-                }
-            });
+            function calcPerView() {
+                return window.innerWidth >= 992 ? 3 : window.innerWidth >= 576 ? 2 : 1;
+            }
 
-            /* ── auto-play every 4 s ── */
+            function cardWidth() {
+                const gap = 24;
+                const vp = track.parentElement.offsetWidth;
+                return (vp - gap * (perView - 1)) / perView;
+            }
+
+            function pad(n) {
+                return String(n).padStart(2, '0');
+            }
+
+            function go(idx) {
+                const maxIdx = TOTAL - perView;
+                current = Math.max(0, Math.min(idx, maxIdx));
+
+                const cw = cardWidth();
+                const off = current * (cw + 24);
+                track.style.transform = `translateX(-${off}px)`;
+
+                /* counter */
+                curEl.textContent = pad(current + 1);
+
+                /* fill bar */
+                fill.style.width = (maxIdx === 0 ? 100 : (current / maxIdx) * 100) + '%';
+
+                /* buttons */
+                btnPrev.disabled = current === 0;
+                btnNext.disabled = current >= maxIdx;
+
+                /* dots */
+                dotsEl.querySelectorAll('.pdot').forEach((d, i) => d.classList.toggle('on', i === current));
+            }
+
             function startAuto() {
-                autoTimer = setInterval(() => {
-                    current = current >= maxIndex() ? 0 : current + 1;
-                    render();
-                }, 4000);
+                autoId = setInterval(() => {
+                    go(current >= TOTAL - perView ? 0 : current + 1);
+                }, 5000);
             }
 
-            function resetAuto() {
-                clearInterval(autoTimer);
+            function stopAuto() {
+                clearInterval(autoId);
+            }
+
+            btnPrev.addEventListener('click', () => {
+                stopAuto();
+                go(current - 1);
                 startAuto();
-            }
+            });
+            btnNext.addEventListener('click', () => {
+                stopAuto();
+                go(current + 1);
+                startAuto();
+            });
 
-            /* ── touch/swipe ── */
-            let touchStartX = 0;
+            /* Swipe */
+            let sx = 0;
             track.addEventListener('touchstart', e => {
-                touchStartX = e.touches[0].clientX;
+                sx = e.touches[0].clientX;
+                stopAuto();
             }, {
                 passive: true
             });
             track.addEventListener('touchend', e => {
-                const dx = e.changedTouches[0].clientX - touchStartX;
-                if (Math.abs(dx) > 50) {
-                    if (dx < 0 && current < maxIndex()) current++;
-                    else if (dx > 0 && current > 0) current--;
-                    render();
-                    resetAuto();
-                }
+                const d = sx - e.changedTouches[0].clientX;
+                if (Math.abs(d) > 44) go(d > 0 ? current + 1 : current - 1);
+                startAuto();
             });
 
-            /* ── keyboard ── */
-            document.addEventListener('keydown', e => {
-                if (e.key === 'ArrowRight' && current < maxIndex()) {
-                    current++;
-                    render();
-                    resetAuto();
-                }
-                if (e.key === 'ArrowLeft' && current > 0) {
-                    current--;
-                    render();
-                    resetAuto();
-                }
-            });
-
-            /* ── resize ── */
-            let resizeTimer;
+            /* Resize */
+            let rTimer;
             window.addEventListener('resize', () => {
-                clearTimeout(resizeTimer);
-                resizeTimer = setTimeout(() => {
-                    current = Math.min(current, maxIndex());
-                    buildDots();
-                    render();
-                }, 150);
+                clearTimeout(rTimer);
+                rTimer = setTimeout(() => {
+                    const pv = calcPerView();
+                    if (pv !== perView) {
+                        perView = pv;
+                        buildDots();
+                    }
+                    go(Math.min(current, TOTAL - perView));
+                }, 160);
             });
 
-            /* ── init ── */
             buildDots();
-            render();
+            go(0);
             startAuto();
         })();
     </script>
