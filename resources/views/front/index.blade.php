@@ -10,13 +10,13 @@
       <div class="col-lg-7">
         <div class="hero-badge"><i class="fas fa-certificate me-2"></i>ISO 37001:2016 Certified</div>
         <h1 class="hero-title">
-          Constucting <span class="accent">Quality , </span><br />
+          Constructing <span class="accent">Quality , </span><br />
           Building <span class="accent">Trust</span>
         </h1>
         <p class="hero-desc">PT. Aryantoputra Mitranusantara adalah perusahaan jasa konstruksi berpengalaman yang melayani pekerjaan sipil, mekanikal, kelistrikan, dan perpipaan untuk sektor industri, komersial, maupun residensial.</p>
         <div class="d-flex gap-3 flex-wrap">
-          <a href="#projects" class="btn-primary-custom">Lihat Proyek <i class="fas fa-arrow-right ms-2"></i></a>
-          <a href="#contact" class="btn-outline-custom">Hubungi Kami</a>
+          <a href="{{ route('proyek') }}" class="btn-primary-custom">Lihat Proyek <i class="fas fa-arrow-right ms-2"></i></a>
+          <a href="{{ route('contact') }}" class="btn-outline-custom">Hubungi Kami</a>
         </div>
         <div class="hero-stats">
           <div class="stat-item">
@@ -63,45 +63,7 @@
         <h2 class="section-title">Mitra Kontruksi<br />Terpercaya Anda</h2>
         <div class="title-line"></div>
         <p class="section-desc mb-4">PT. Aryantoputra Mitranusantara merupakan sebuah perusahaan yang bergerak dalam bidang jasa konstruksi sejak tahun 1988. Pelayanan yang kami sediakan antara lain berbagai macam kebutuhan konstruksi seperti pekerjaan sipil, mekanikal, kelistrikan dan perpipaan di dalam aplikasi bangunan industri, komersil maupun residensi.</p>
-        <p class="section-desc mb-4">Sejak pendirian perusahaan, kami telah dipercaya untuk melaksanakan proyek-proyek pembangunan, renovasi dan pemeliharaan dari sektor pemerintahan maupun swasta. Klien kami mencakup instansi nasional seperti PLN, BNI, BAT Indonesia, Universitas Brawijaya, Dinas Kesehatan, hingga perusahaan industri swasta.</p>
-        <!-- <div class="row g-3 mb-4">
-          <div class="col-sm-6">
-            <div class="about-feature">
-              <div class="about-feature-icon"><i class="fas fa-award"></i></div>
-              <div>
-                <h6>Berlisensi Lengkap</h6>
-                <p>IUJK, NIB, Akta Pendirian & SBU BG resmi</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="about-feature">
-              <div class="about-feature-icon"><i class="fas fa-clock"></i></div>
-              <div>
-                <h6>Tepat Waktu</h6>
-                <p>Komitmen menyelesaikan sesuai jadwal</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="about-feature">
-              <div class="about-feature-icon"><i class="fas fa-shield-alt"></i></div>
-              <div>
-                <h6>Standar Keselamatan</h6>
-                <p>Mengutamakan K3 di seluruh site proyek</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="about-feature">
-              <div class="about-feature-icon"><i class="fas fa-handshake"></i></div>
-              <div>
-                <h6>One Stop Solution</h6>
-                <p>Semua kebutuhan konstruksi dalam satu mitra</p>
-              </div>
-            </div>
-          </div>
-        </div> -->
+        <p class="section-desc mb-4">Sejak pendirian perusahaan, kami telah dipercaya untuk melaksanakan proyek-proyek pembangunan, renovasi dan pemeliharaan dari sektor pemerintahan maupun swasta.</p>
         <a href="{{ route('tentang') }}" class="btn-primary-custom">Selengkapnya</a>
       </div>
     </div>

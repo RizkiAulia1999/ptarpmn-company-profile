@@ -8,6 +8,9 @@
     <meta content="" name="description" />
     <meta content="" name="keywords" />
 
+    <!-- Logo -->
+    <link rel="shortcut icon" type="image/x-icon" href="/asset/img/ARYCON_Logomark_Biru_Flat.png" />
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" />
@@ -24,7 +27,7 @@
             <a class="navbar-brand p-0" href="#hero">
                 <div class="navbar-brand-wrap">
                     <div class="brand-text">
-                        <img src="{{ asset('/asset/img/ARYCON_Scnd_White_Tag.png') }}" width="200" height="60"
+                        <img src="{{ asset('/asset/img/ARYCON_Scnd_Outline_White_Tag.png') }}" width="200" height="60"
                             alt="PT Aryantoputra Mitranusantara">
                     </div>
                 </div>
@@ -36,10 +39,10 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="{{ route('beranda') }}">Beranda</a></li>
 
-                    <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Layanan</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Proyek</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimoni</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('tentang') }}">Tentang</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('beranda') }}#services">Layanan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('proyek') }}">Proyek</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('beranda') }}#testimonials">Testimoni</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Kontak</a></li>
                 </ul>
             </div>
@@ -57,7 +60,7 @@
             <div class="row g-5">
                 <div class="col-lg-4">
                     <div class="footer-desc">
-                        <img src="{{ asset('/asset/img/ARYCON_Scnd_White_Tag.png') }}" width="200" height="60"
+                        <img src="{{ asset('/asset/img/ARYCON_Scnd_Outline_White_Tag.png') }}" width="200" height="60"
                             alt="PT Aryantoputra Mitranusantara">
                     </div>
                     <p class="footer-desc">Perusahaan jasa konstruksi berpengalaman yang melayani pekerjaan sipil, mekanikal, kelistrikan, dan perpipaan sejak 1988.</p>
