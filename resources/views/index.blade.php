@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" />
 
     <!-- Template Main CSS File -->
-    <link href="{{ asset('/asset/css/style.css') }}" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ asset('/asset/css/style.css') }}?v={{ time() }}">
 
 </head>
 
