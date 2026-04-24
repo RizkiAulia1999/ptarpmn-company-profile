@@ -104,6 +104,38 @@
     </footer>
     <!-- End Footer -->
 
+    <!-- Navbar -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Active nav link on scroll
+        const sections = document.querySelectorAll('section[id], #hero');
+        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+        const backTop = document.getElementById('backTop');
+
+        window.addEventListener('scroll', () => {
+            const pos = window.scrollY + 100;
+            sections.forEach(sec => {
+                if (pos >= sec.offsetTop && pos < sec.offsetTop + sec.offsetHeight) {
+                    navLinks.forEach(l => l.classList.remove('active', 'text-white'));
+                    const active = document.querySelector(`.navbar-nav .nav-link[href="#${sec.id}"]`);
+                    if (active) {
+                        active.classList.add('active');
+                        active.style.color = '#fff';
+                    }
+                }
+            });
+            backTop.classList.toggle('visible', window.scrollY > 400);
+        });
+
+        // Smooth close mobile menu on link click
+        document.querySelectorAll('.navbar-nav .nav-link').forEach(l => {
+            l.addEventListener('click', () => {
+                const toggler = document.querySelector('.navbar-toggler');
+                const menu = document.getElementById('navMenu');
+                if (menu.classList.contains('show')) toggler.click();
+            });
+        });
+    </script>
     <!-- Animasi Counter -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {

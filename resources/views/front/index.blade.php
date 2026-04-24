@@ -17,7 +17,6 @@
         <div class="d-flex gap-3 flex-wrap" >
           <a href="{{ route('proyek') }}" class="btn-primary-custom">Lihat Proyek <i class="fas fa-arrow-right ms-2"></i></a>
           <a href="{{ route('contact') }}" class="btn-white">Hubungi Kami</a>
-
         </div> 
         <div class="hero-stats">
           <div class="stat-item">
