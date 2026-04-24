@@ -16,6 +16,8 @@
         <p class="hero-desc">PT. Aryantoputra Mitranusantara adalah perusahaan jasa konstruksi berpengalaman yang melayani pekerjaan sipil, mekanikal, kelistrikan, dan perpipaan untuk sektor industri, komersial, maupun residensial.</p>
         <div class="d-flex gap-3 flex-wrap">
           <a href="{{ route('proyek') }}" class="btn-primary-custom">Lihat Proyek <i class="fas fa-arrow-right ms-2"></i></a>
+                  <a href="{{ route('contact') }}" class="btn-outline-custom">Hubungi Kami</a>
+
         </div>
         <div class="hero-stats">
           <div class="stat-item">
