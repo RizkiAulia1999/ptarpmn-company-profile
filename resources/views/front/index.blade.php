@@ -16,7 +16,11 @@
         <p class="hero-desc">PT. Aryantoputra Mitranusantara adalah perusahaan jasa konstruksi berpengalaman yang melayani pekerjaan sipil, mekanikal, kelistrikan, dan perpipaan untuk sektor industri, komersial, maupun residensial.</p>
         <div class="d-flex gap-3 flex-wrap">
           <a href="{{ route('proyek') }}" class="btn-primary-custom">Lihat Proyek <i class="fas fa-arrow-right ms-2"></i></a>
-          <a href="{{ route('contact') }}" class="btn-outline-custom">Hubungi Kami</a>
+          <a href="{{ route('contact') }}" class="btn-outline-custom" style=".btn-outline-custom:hover {
+    border-color: rgb(00, 121, 109);
+    color: rgb(00, 121, 109); .btn-outline-custom{ position: relative;
+    z-index: 10;};
+}">Hubungi Kami</a>
         </div>
         <div class="hero-stats">
           <div class="stat-item">
@@ -181,7 +185,7 @@
 
         ═══ CARD 3 ═══
         <div class="proj-card">
-          <img src="{{ asset('/asset/img/ktng1.jpg') }}" alt="PT. Korea Tomorrow & Global" loading="lazy" class="proj-img" >
+          <img src="{{ asset('/asset/img/ktng1.jpg') }}" alt="PT. Korea Tomorrow & Global" loading="lazy" class="proj-img">
           <div class="proj-gradient"></div>
           <div class="proj-tag">Gedung</div>
           <div class="proj-year-badge"><i class="fas fa-calendar-alt me-1"></i>2025</div>

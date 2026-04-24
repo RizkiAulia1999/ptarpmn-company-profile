@@ -227,8 +227,6 @@ h5 {
         color 0.2s;
     text-decoration: none;
     display: inline-block;
-    position: relative;
-    z-index: 10;
 }
 
 .btn-outline-custom:hover {
