@@ -187,7 +187,7 @@
           <div class="proj-year-badge"><i class="fas fa-calendar-alt me-1"></i>2025</div>
           <div class="proj-info">
             <div class="proj-name">Repair Of Utility Building Secondary</div>
-            <div class="proj-loc">PT. Korea Tomorrow & Global</div>
+            <div class="proj-loc">PT. Tri Sakti Purwosari Makmur</div>
             <div class="proj-detail-strip">
               <div class="proj-loc"><i class="fas fa-map-marker-alt"></i> Purwosari, Jawa Timur</div>
               <div class="proj-btn-circle"><i class="fas fa-arrow-right"></i></div>

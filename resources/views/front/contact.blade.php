@@ -23,14 +23,14 @@
           <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
           <div>
             <h6>Kantor Pusat</h6>
-            <p>Jl. Nusakambangan No.34, Kasin<br/>Malang, Jawa Timur 65141</p>
+            <p>Jl. Nusakambangan No.34, Kasin<br/>Malang, Jawa Timur 65117</p>
           </div>
         </div>
         <div class="contact-info-item">
           <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
           <div>
             <h6>Telepon</h6>
-            <p>(0341) 366403<br/>+62 819-0606-2622</p>
+            <p>0341-366403<br/>+62 819-0606-2622</p>
           </div>
         </div>
         <div class="contact-info-item">

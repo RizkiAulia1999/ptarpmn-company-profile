@@ -73,9 +73,9 @@
                 <div class="col-sm-6 col-lg-2">
                     <div class="footer-heading">Navigasi</div>
                     <ul class="footer-links">
-                        <li><a href="#about">Tentang Kami</a></li>
-                        <li><a href="#services">Layanan</a></li>
-                        <li><a href="#projects">Proyek</a></li>
+                        <li><a href="{{ route('tentang') }}">Tentang Kami</a></li>
+                        <li><a href="{{ route('beranda') }}#services">Layanan</a></li>
+                        <li><a href="{{ route('proyek') }}">Proyek</a></li>
                         <li><a href="{{ route('contact') }}">Kontak</a></li>
                     </ul>
                 </div>
@@ -91,10 +91,10 @@
                     <div class="footer-heading">Kontak</div>
                     <p style="color:rgba(255,255,255,.45);font-size:.82rem;line-height:1.7">
                         Jl. Nusakambangan No.34<br />
-                        Malang, Jawa Timur, Indonesia<br /><br />
+                        Malang, Jawa Timur, Indonesia 65117<br /><br />
                         0341-366403<br>
                         0819-0606-2622<br />
-                        pt_arpmn@yahoo.com
+                        pt_arpmn@yahoo.co.id
                     </p>
                 </div>
             </div>
