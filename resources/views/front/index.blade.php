@@ -14,14 +14,11 @@
           Building <span class="accent">Trust</span>
         </h1>
         <p class="hero-desc">PT. Aryantoputra Mitranusantara adalah perusahaan jasa konstruksi berpengalaman yang melayani pekerjaan sipil, mekanikal, kelistrikan, dan perpipaan untuk sektor industri, komersial, maupun residensial.</p>
-        <div class="d-flex gap-3 flex-wrap" style=".btn-outline-custom:hover {
-    border-color: rgb(00, 121, 109);
-    color: rgb(00, 121, 109);
-}">
+        <div class="d-flex gap-3 flex-wrap" >
           <a href="{{ route('proyek') }}" class="btn-primary-custom">Lihat Proyek <i class="fas fa-arrow-right ms-2"></i></a>
-                  <a href="{{ route('contact') }}" class="btn-outline-custom">Hubungi Kami</a>
+          <a href="{{ route('contact') }}" class="btn-white">Hubungi Kami</a>
 
-        </div>
+        </div> 
         <div class="hero-stats">
           <div class="stat-item">
             <div class="stat-num counter" data-target="project" data-value="300"></div>
