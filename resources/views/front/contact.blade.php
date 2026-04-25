@@ -30,14 +30,14 @@
           <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
           <div>
             <h6>Telepon</h6>
-            <p>0341-366403<br/>+62 819-0606-2622</p>
+            <p>0341-366043<br/>+62 819-0606-2622</p>
           </div>
         </div>
         <div class="contact-info-item">
           <div class="contact-icon"><i class="fas fa-envelope"></i></div>
           <div>
             <h6>Email</h6>
-            <p>pt_arpmn@yahoo.com</p>
+            <p>pt_arpmn@yahoo.co.id</p>
           </div>
         </div>
         <div class="contact-info-item">

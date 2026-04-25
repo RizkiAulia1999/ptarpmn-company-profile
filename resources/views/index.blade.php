@@ -91,7 +91,7 @@
                     <p style="color:rgba(255,255,255,.45);font-size:.82rem;line-height:1.7">
                         Jl. Nusakambangan No.34<br />
                         Malang, Jawa Timur, Indonesia 65117<br /><br />
-                        0341-366403<br>
+                        0341-366043<br>
                         0819-0606-2622<br />
                         pt_arpmn@yahoo.co.id
                     </p>

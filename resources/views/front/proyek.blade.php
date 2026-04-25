@@ -16,6 +16,21 @@
     </div>
 </div>
 
+<!-- ══════════ STAT RIBBON ══════════ -->
+<div class="stat-ribbon">
+  <div class="container">
+    <div class="stat-ribbon-inner">
+      <div class="sr-item"><div class="sr-num">1988</div><div class="sr-lbl">Mulai Berkarya</div></div>
+      <div class="sr-divider d-none d-md-block"></div>
+      <div class="sr-item"><div class="sr-num">300+</div><div class="sr-lbl">Proyek Selesai</div></div>
+      <div class="sr-divider d-none d-md-block"></div>
+      <div class="sr-item"><div class="sr-num">3</div><div class="sr-lbl">Bidang Layanan</div></div>
+      <div class="sr-divider d-none d-md-block"></div>
+      <div class="sr-item"><div class="sr-num">35+</div><div class="sr-lbl">Tahun Pengalaman</div></div>
+    </div>
+  </div>
+</div>
+
 <!-- FILTER -->
 <section id="filter-section">
   <div class="container">
