@@ -17,7 +17,7 @@
 </div>
 
 <!-- ══════════ STAT RIBBON ══════════ -->
-<div class="stat-ribbon">
+<!-- <div class="stat-ribbon">
   <div class="container">
     <div class="stat-ribbon-inner">
       <div class="sr-item"><div class="sr-num">1988</div><div class="sr-lbl">Mulai Berkarya</div></div>
@@ -29,7 +29,7 @@
       <div class="sr-item"><div class="sr-num">35+</div><div class="sr-lbl">Tahun Pengalaman</div></div>
     </div>
   </div>
-</div>
+</div> -->
 
 <!-- FILTER -->
 <section id="filter-section">
