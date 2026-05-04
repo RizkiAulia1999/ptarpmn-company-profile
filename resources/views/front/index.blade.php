@@ -139,6 +139,11 @@
           Deretan proyek yang telah kami selesaikan untuk klien pemerintah dan swasta di seluruh Indonesia.
         </p>
       </div>
+            <div class="col-lg-4 d-flex justify-content-lg-end mt-3 mt-lg-0">
+        <a href="#contact" class="btn-primary-custom">
+          Lihat Semua Proyek <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+      </div>
     </div>
 
     <!-- Carousel viewport -->

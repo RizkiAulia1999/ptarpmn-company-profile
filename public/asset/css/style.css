@@ -549,6 +549,8 @@ section {
     cursor: pointer;
     border-bottom: 3px solid transparent;
     transition: border-color 0.3s;
+    aspect-ratio: 3 / 2; 
+    overflow: hidden;  
 }
 .proj-card:hover {
     border-color: var(--primary);
@@ -567,9 +569,8 @@ section {
 
 /* Fixed 3:2 image ratio */
 .proj-img-ratio {
-    position: relative;
-    padding-top: 66.67%;
-    overflow: hidden;
+    position: absolute;
+  inset: 0; 
 }
 
 */ .proj-img {
@@ -705,6 +706,9 @@ section {
     margin-bottom: 6px;
     transform: translateY(4px);
     transition: transform 0.3s ease;
+     white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .proj-card:hover .proj-name {
     transform: translateY(0);
