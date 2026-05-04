@@ -14,10 +14,10 @@
           Building <span class="accent">Trust</span>
         </h1>
         <p class="hero-desc">PT. Aryantoputra Mitranusantara adalah perusahaan jasa konstruksi berpengalaman yang melayani pekerjaan sipil, mekanikal, kelistrikan, dan perpipaan untuk sektor industri, komersial, maupun residensial.</p>
-        <div class="d-flex gap-3 flex-wrap" >
+        <div class="d-flex gap-3 flex-wrap">
           <a href="{{ route('proyek') }}" class="btn-primary-custom">Lihat Proyek <i class="fas fa-arrow-right ms-2"></i></a>
-          <a href="{{ route('contact') }}" class="btn-white">Hubungi Kami</a>
-        </div> 
+          <a href="#cta" class="btn-white">Hubungi Kami</a>
+        </div>
         <div class="hero-stats">
           <div class="stat-item">
             <div class="stat-num counter" data-target="project" data-value="300"></div>
@@ -139,8 +139,8 @@
           Deretan proyek yang telah kami selesaikan untuk klien pemerintah dan swasta di seluruh Indonesia.
         </p>
       </div>
-            <div class="col-lg-4 d-flex justify-content-lg-end mt-3 mt-lg-0">
-        <a href="#contact" class="btn-primary-custom">
+      <div class="col-lg-4 d-flex justify-content-lg-end mt-3 mt-lg-0">
+        <a href="{{ route('proyek') }}" class="btn-primary-custom">
           Lihat Semua Proyek <i class="fas fa-arrow-right ms-2"></i>
         </a>
       </div>
@@ -152,16 +152,15 @@
 
         <!-- ═══ CARD 1 ═══-->
         <div class="proj-card">
-          <img src="{{ asset('/asset/img/perbaikan gedung 29a.jpg') }}" alt="Menara Perkantoran Surabaya" loading="lazy" class="proj-img">
-
+          <img src="{{ asset('/asset/img/japfa.jpeg') }}" alt="Apotek & KLinik" loading="lazy" class="proj-img" width="400">
           <div class="proj-gradient"></div>
           <div class="proj-tag">Gedung</div>
-          <div class="proj-year-badge"><i class="fas fa-calendar-alt me-1"></i>2023</div>
+          <div class="proj-year-badge"><i class="fas fa-calendar-alt me-1"></i>2025</div>
           <div class="proj-info">
-            <div class="proj-name">Perbaikan Gedung 29A</div>
-            <div class="proj-loc">PT. Bentoel Prima Malang</div>
+            <div class="proj-name">Apotek & KLinik</div>
+            <div class="proj-loc">PT. Japfa Comfeed</div>
             <div class="proj-detail-strip">
-              <div class="proj-loc"><i class="fas fa-map-marker-alt"></i> Malang, Jawa Timur</div>
+              <div class="proj-loc"><i class="fas fa-map-marker-alt"></i> Sidoarjo, Jawa Timur</div>
               <div class="proj-btn-circle"><i class="fas fa-arrow-right"></i></div>
             </div>
           </div>
@@ -169,8 +168,23 @@
 
         <!-- ═══ CARD 2 ═══-->
         <div class="proj-card">
-          <img src="{{ asset('/asset/img/behaestex.jpg') }}" alt="Menara Perkantoran Surabaya" loading="lazy" class="proj-img">
+          <img src="{{ asset('/asset/img/tempo.jpeg') }}" alt="PT Tempo Utama Sejahtera" loading="lazy" class="proj-img" width="380">
+          <div class="proj-gradient"></div>
+          <div class="proj-tag">Flooring</div>
+          <div class="proj-year-badge"><i class="fas fa-calendar-alt me-1"></i>2025</div>
+          <div class="proj-info">
+            <div class="proj-name">Pek. Perkuatan Lantai & Pembuatan Platform Ruang Compounding</div>
+            <div class="proj-loc">PT Tempo Utama Sejahtera</div>
+            <div class="proj-detail-strip">
+              <div class="proj-loc"><i class="fas fa-map-marker-alt"></i> Mojoketo, Jawa Timur</div>
+              <div class="proj-btn-circle"><i class="fas fa-arrow-right"></i></div>
+            </div>
+          </div>
+        </div>
 
+        ═══ CARD 3 ═══
+        <div class="proj-card">
+          <img src="{{ asset('/asset/img/behaestex.jpg') }}" alt="Menara Perkantoran Surabaya" loading="lazy" class="proj-img">
           <div class="proj-gradient"></div>
           <div class="proj-tag">Flooring</div>
           <div class="proj-year-badge"><i class="fas fa-calendar-alt me-1"></i>2025</div>
@@ -184,9 +198,9 @@
           </div>
         </div>
 
-        ═══ CARD 3 ═══
+        <!-- Card 4 -->
         <div class="proj-card">
-          <img src="{{ asset('/asset/img/ktng1.jpg') }}" alt="PT. Korea Tomorrow & Global" loading="lazy" class="proj-img" >
+          <img src="{{ asset('/asset/img/ktng1.jpg') }}" alt="PT. Korea Tomorrow & Global" loading="lazy" class="proj-img">
           <div class="proj-gradient"></div>
           <div class="proj-tag">Gedung</div>
           <div class="proj-year-badge"><i class="fas fa-calendar-alt me-1"></i>2025</div>
@@ -195,23 +209,6 @@
             <div class="proj-loc">PT. Tri Sakti Purwosari Makmur</div>
             <div class="proj-detail-strip">
               <div class="proj-loc"><i class="fas fa-map-marker-alt"></i> Purwosari, Jawa Timur</div>
-              <div class="proj-btn-circle"><i class="fas fa-arrow-right"></i></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="proj-card">
-          <img src="{{ asset('/asset/img/perbaikan gedung 29a.jpg') }}" alt="Menara Perkantoran Surabaya" loading="lazy" class="proj-img">
-
-          <div class="proj-gradient"></div>
-          <div class="proj-tag">Gedung</div>
-          <div class="proj-year-badge"><i class="fas fa-calendar-alt me-1"></i>2023</div>
-          <div class="proj-info">
-            <div class="proj-name">Perbaikan Gedung 29A</div>
-            <div class="proj-loc">PT. Bentoel Prima Malang</div>
-            <div class="proj-detail-strip">
-              <div class="proj-loc"><i class="fas fa-map-marker-alt"></i> Malang, Jawa Timur</div>
               <div class="proj-btn-circle"><i class="fas fa-arrow-right"></i></div>
             </div>
           </div>
@@ -235,13 +232,12 @@
 
         <!-- ═══ CARD 6 ═══ -->
         <div class="proj-card">
-          <img src="{{ asset('/asset/img/perbaikan gedung 29a.jpg') }}" alt="Menara Perkantoran Surabaya" loading="lazy" class="proj-img">
-
+          <img src="{{ asset('/asset/img/bentol.png') }}" alt="Pembuatan Taman & Cat e-Liquid" loading="lazy" class="proj-img" width="380">
           <div class="proj-gradient"></div>
           <div class="proj-tag">Gedung</div>
           <div class="proj-year-badge"><i class="fas fa-calendar-alt me-1"></i>2023</div>
           <div class="proj-info">
-            <div class="proj-name">Perbaikan Gedung 29A</div>
+            <div class="proj-name">Pembuatan Taman & Cat e-Liquid</div>
             <div class="proj-loc">PT. Bentoel Prima Malang</div>
             <div class="proj-detail-strip">
               <div class="proj-loc"><i class="fas fa-map-marker-alt"></i> Malang, Jawa Timur</div>

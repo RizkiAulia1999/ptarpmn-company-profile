@@ -18,6 +18,8 @@
     <!-- Template Main CSS File -->
     <link href="{{ asset('asset/css/style.css') }}" rel="stylesheet" />
     <link href="{{ asset('asset/css/beranda.css') }}" rel="stylesheet" />
+    <link href="{{ asset('asset/css/proyek.css') }}" rel="stylesheet" />
+
 
 </head>
 
@@ -178,11 +180,8 @@
         });
     </script>
 
-    <!-- Corousel Logic -->
+    <!-- Corousel  PORTFOLIO Logic -->
     <script>
-        /* ══════════════════════════════════════════════════════
-   PORTFOLIO CAROUSEL
-   ══════════════════════════════════════════════════════ */
         (function() {
             const track = document.getElementById('projTrack');
             const btnPrev = document.getElementById('projPrev');
@@ -200,7 +199,6 @@
 
             maxEl.textContent = pad(TOTAL);
 
-            /* Build dots */
             function buildDots() {
                 dotsEl.innerHTML = '';
                 const pages = TOTAL - perView;
@@ -233,22 +231,13 @@
             function go(idx) {
                 const maxIdx = TOTAL - perView;
                 current = Math.max(0, Math.min(idx, maxIdx));
-
                 const cw = cardWidth();
                 const off = current * (cw + 24);
                 track.style.transform = `translateX(-${off}px)`;
-
-                /* counter */
                 curEl.textContent = pad(current + 1);
-
-                /* fill bar */
                 fill.style.width = (maxIdx === 0 ? 100 : (current / maxIdx) * 100) + '%';
-
-                /* buttons */
                 btnPrev.disabled = current === 0;
                 btnNext.disabled = current >= maxIdx;
-
-                /* dots */
                 dotsEl.querySelectorAll('.pdot').forEach((d, i) => d.classList.toggle('on', i === current));
             }
 
@@ -273,7 +262,7 @@
                 startAuto();
             });
 
-            /* Swipe */
+            /* Touch swipe */
             let sx = 0;
             track.addEventListener('touchstart', e => {
                 sx = e.touches[0].clientX;
@@ -306,6 +295,54 @@
             startAuto();
         })();
     </script>
+<script>
+  /* ── FILTER ── */
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      document.querySelectorAll('.proj-item').forEach(item => {
+        const cat = (item.dataset.cat || 'all');
+        if (f === 'all' || cat.split(' ').includes(f)) {
+          item.classList.remove('hidden');
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+    });
+  });
+
+  /* ── MODAL ── */
+  function openModal(card) {
+    const img   = card.querySelector('.p-img');
+    const d     = card.closest('.proj-item') || card.parentElement.closest('.proj-item') || card.parentElement;
+
+    document.getElementById('modalTitle').textContent  = card.closest('.proj-item').dataset.title || card.querySelector('h5').textContent;
+    document.getElementById('modalImg').src            = img.src;
+    document.getElementById('modalImg').alt            = img.alt;
+    document.getElementById('modalClient').textContent = card.closest('.proj-item').dataset.client || '–';
+    document.getElementById('modalYear').textContent   = card.closest('.proj-item').dataset.tahun  || '–';
+    document.getElementById('modalSpk').textContent    = 'No. ' + (card.closest('.proj-item').dataset.spk || '–');
+    document.getElementById('modalDesc').textContent   = card.closest('.proj-item').dataset.desc   || '–';
+    new bootstrap.Modal(document.getElementById('projectModal')).show();
+  }
+
+  /* ── BACK TO TOP ── */
+  window.addEventListener('scroll', () => {
+    document.getElementById('backTop').classList.toggle('visible', window.scrollY > 400);
+  });
+
+  /* ── NAVBAR CLOSE ON MOBILE ── */
+  document.querySelectorAll('.navbar-nav .nav-link').forEach(l => {
+    l.addEventListener('click', () => {
+      const menu = document.getElementById('navMenu');
+      if (menu.classList.contains('show')) document.querySelector('.navbar-toggler').click();
+    });
+  });
+</script>
+
+    
 </body>
 
 </html>
