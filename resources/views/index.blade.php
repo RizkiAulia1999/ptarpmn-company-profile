@@ -17,6 +17,8 @@
 
     <!-- Template Main CSS File -->
     <link href="{{ asset('/asset/css/style.css') }}" rel="stylesheet" />
+    <link href="{{ asset('/asset/css/beranda.css') }}" rel="stylesheet" />
+
 </head>
 
 <body>
