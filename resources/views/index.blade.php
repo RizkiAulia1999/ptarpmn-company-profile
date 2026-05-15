@@ -21,6 +21,7 @@
     <link href="{{ asset('asset/css/style.css') }}" rel="stylesheet" />
     <link href="{{ asset('asset/css/beranda.css') }}" rel="stylesheet" />
     <link href="{{ asset('asset/css/proyek.css') }}" rel="stylesheet" />
+    <link href="{{ asset('asset/css/project.css') }}" rel="stylesheet" />
 
 
 </head>
