@@ -15,6 +15,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" />
 
+      <!-- EmailJS SDK — kirim form ke email tanpa backend -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <!-- Template Main CSS File -->
     <link href="{{ asset('asset/css/style.css') }}" rel="stylesheet" />
     <link href="{{ asset('asset/css/beranda.css') }}" rel="stylesheet" />
